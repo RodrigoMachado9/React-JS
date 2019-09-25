@@ -1,28 +1,11 @@
-import React, { Component } from 'react';
-import logo from './truckpad.svg';
-import './App.css';
+import React, { Component } from 'react'
+//importanto determinado componente//
+import TextCouter from './TextCounter';
 
-class App extends Component{
-  render(){
-    return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          truckpad
-        </p>
-        <a
-          className="App-link"
-          href="https://www.truckpad.com.br"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          click-here
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  render() {
+    return <div><TextCouter/></div>;
+  }
 }
 
 export default App;
