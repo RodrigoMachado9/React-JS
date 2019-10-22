@@ -9,6 +9,21 @@ class NewCourseForm extends Component{
             image: ''
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+
+    }
+
+    handleSubmit(event){
+        event.preventDefault();
+        const   newCourse = this.state;
+
+        if(newCourse.name && newCourse.image && newCourse.category){
+            this.props.onSubmit(newCourse);
+            this.setState({
+                name:'',
+                image:''
+            })
+        }
 
     }
 
@@ -23,9 +38,10 @@ class NewCourseForm extends Component{
 
     render (){
 
-        const {props, state} = this;
+        const { state } = this;
+        // const { props, state } = this;
         return (
-            <form className={'course-form'}>
+            <form className={'course-form'}  onSubmit={this.handleSubmit}>
                 <label>
                     <span>Nome:</span>
                     <input name={'name'}  onChange={this.handleChange} value={state.name}/>
