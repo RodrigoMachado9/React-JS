@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Course from './components/Course';
+import NewCourseForm from "./components/NewCourseForm";
 import './App.css';
 /* eslint-disable */
 
@@ -37,8 +38,6 @@ class App extends Component {
     courses.splice(courseId, 1);
     this.setState({courses});
 
-
-
   }
 
   render() {
@@ -46,6 +45,7 @@ class App extends Component {
 
     return (
       <div className={"App"}>
+        <NewCourseForm/>
         <ul className={"courses-list"}>
           {
 
