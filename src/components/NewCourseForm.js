@@ -15,8 +15,7 @@ class NewCourseForm extends Component{
 
     handleSubmit(event){
         event.preventDefault();
-        const   newCourse = this.state;
-
+        const newCourse = this.state;
         if(newCourse.name && newCourse.image && newCourse.category){
             this.props.onSubmit(newCourse);
             this.setState({
